@@ -1,9 +1,9 @@
-<h1>Doses page</h1>
+<h1>Add an ingredient</h1>
 
 <%= simple_form_for [@cocktail, @dose] do |c| %>
-  <%= c.input :description %>
+  <%= c.input :description, label: "Quantity" %>
   <%= c.association :ingredient %>
-  <%= c.submit %>
+  <%= c.submit "Create Ingredient" %>
 <% end %>
 
-<p><%= link_to "Main Page", cocktails_path  %></p>
+<p><%= link_to "Main Page", root_path  %></p>
