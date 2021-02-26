@@ -13,6 +13,8 @@
 @import "pages/index";
 
 @import "cocktails";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body {
   background-color: $light-grey;
@@ -33,7 +35,7 @@ h1 {
   text-decoration: underline $turquoise;
 }
 
-#nav-bar {
+#content-bar {
   height: 32px;
   background-color: #08ffc8;
   font-size: 12px;
@@ -48,4 +50,7 @@ h1 {
   height: auto;
 }
 
+.add-link {
+  font-size: 12px;
+}
 

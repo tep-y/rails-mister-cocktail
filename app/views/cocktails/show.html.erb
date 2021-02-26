@@ -1,12 +1,25 @@
-<h1><%= @cocktail.name %></h1>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <%= link_to "Freepour Cocktails", root_path, class: "nav-link" %>
+  <div class="navbar" >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to root_path do %>
+          <%= image_tag "cocktail_icon_main.png", width: "30", class: "icon-link" %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
 
-<% @cocktail.doses.each do |dose| %>
+<div class="card-product">
+  <%= cl_image_tag @cocktail.photo.key, width: 300 %>
+  <div class="card-product-infos">
+    <h1><%= @cocktail.name %></h1>
+    <% @cocktail.doses.each do |dose| %>
   <p><%= "#{dose.description} #{dose.ingredient.name}" %>
-    <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }  %>
+    <%= link_to icon('fas', 'ban'), dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }  %>
   </p>
+  <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "add-link" %>
 <% end %>
-
-<%= cl_image_tag @cocktail.photo.key, width: 300 %>
-
-<p><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %></p>
-<p><%= link_to "Main Page", root_path  %></p>
+  </div>
+</div>
