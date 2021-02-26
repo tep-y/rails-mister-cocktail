@@ -2,6 +2,7 @@
 
 <%= simple_form_for @cocktail do |c| %>
   <%= c.input :name %>
+  <%= c.input :photo, as: :file %>
   <%= c.submit %>
 <% end %>
 
