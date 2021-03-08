@@ -3,8 +3,9 @@
     <div class="col-12">
       <%= image_tag "freepour_logo.png", alt: "logo", class: "main-logo" %>
     </div>
-    <div class="col-12">
+    <div class="col-12" id="nav-index">
       <%= link_to "Create a new cocktail", new_cocktail_path, class: "btn btn-info" %>
+      <%= link_to "Go to Cocktail List", root_path(:anchor => "cocktail-list"), class: "btn btn-info" %>
     </div>
   </div>
 
@@ -20,7 +21,7 @@
 <div class="container text-center">
   <div class="row">
     <div class="col-12">
-      <h1 class="cocktail-list">Cocktail List</h1>
+      <h1 class="cocktail-list" id="cocktail-list">Cocktail List</h1>
       <%= image_tag "cocktail_icon.png", alt: "cocktail_icon", class: "menu-icon", width: "40px;" %>
       <ul>
         <% @cocktails.each do |cocktail| %>
@@ -35,3 +36,4 @@
 <div class="footer">
   <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
 </div>
+

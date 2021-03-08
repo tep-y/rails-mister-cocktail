@@ -8,11 +8,13 @@
 
 require 'open-uri'
 require 'json'
+require 'faker'
 
 puts 'Deleting current Database..'
 Ingredient.delete_all
+Cocktail.delete_all
 
-puts 'Creating Database..'
+puts 'Creating Ingredients..'
 puts '...'
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
@@ -21,6 +23,16 @@ ingredients = JSON.parse(file)
 
 ingredients['drinks'].each do |ingredient|
   Ingredient.create(name: ingredient['strIngredient1'])
+end
+
+puts 'Creating Cocktails..'
+puts '...'
+
+200.times do
+  c = Cocktail.create(
+    name: Faker::Beer.name
+  )
+  # c.photo.attach(io: File.open('app/assets/images/'), filename: 'cocktail_icon.png')
 end
 
 puts 'Completed!'
