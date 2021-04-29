@@ -23,21 +23,28 @@
   grid-template-columns: 50% 50%;
   height: 100%;
 }
-
 .panel-01 {
-  border: blue 2px solid;
 }
 
 .panel-02 {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  border: red solid 2px;
 }
 
-.panel-02 p {
-margin: 0;
+// .panel-02 img {
+//   margin: 0;
+//   position: relative;
+// }
+
+.panel-02 h1 {
+  position: absolute;
+  width: 440px;
+  top: 250px;
+  left: 96px;
 }
+
 
 .container {
   margin-bottom: 72px;
@@ -56,20 +63,20 @@ ul {
   padding: 0;
 }
 
-#title-bar {
-  height: 48px;
-  background-color: #08ffc8;
-  font-size: 16px;
-  font-weight: normal;
+// #title-bar {
+//   height: 48px;
+//   background-color: #08ffc8;
+//   font-size: 16px;
+//   font-weight: normal;
 
-  p {
-    margin: 6px auto;
-  }
-}
+//   p {
+//     margin: 6px auto;
+//   }
+// }
 
-h4 {
-  font-family: "Montserrat", sans-serif;
-}
+// h4 {
+//   font-family: "Montserrat", sans-serif;
+// }
 
 .nav-link {
   font-weight: bold;
