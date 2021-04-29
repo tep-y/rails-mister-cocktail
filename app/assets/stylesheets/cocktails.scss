@@ -18,12 +18,27 @@
   background-color: white;
 }
 
-.description {
-  position: absolute;
-  display: flex;
-  top: 0;
-  right: 0;
+.cover-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
 }
+
+.panel-01 {
+  border: blue 2px solid;
+}
+
+.panel-02 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: red solid 2px;
+}
+
+.panel-02 p {
+margin: 0;
+}
+
 .container {
   margin-bottom: 72px;
 }
