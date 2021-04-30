@@ -24,6 +24,11 @@ html {
   scroll-behavior: smooth;
 }
 
+p {
+  font-size: 14px;
+  font-family: "Chivo", "sans-serif";
+}
+
 a {
   text-decoration: none;
   color: red;
@@ -34,7 +39,7 @@ a {
   }
 }
 
-h1 {
+.headline {
   font-weight: bold;
   font-size: 36px;
   color: white;
