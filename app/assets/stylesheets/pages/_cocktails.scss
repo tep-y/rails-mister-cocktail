@@ -1,0 +1,29 @@
+.cocktail-title {
+  text-align: center;
+  padding: 64px 0 18px 0;
+}
+
+.cocktail-list {
+  // border: blue solid 2px;
+  display: grid;
+  grid-template-columns: 1fr 80vw 1fr;
+  height: 550px;
+}
+
+.cocktail-info {
+  height: 100%;
+}
+
+.cocktail-search {
+  border: white solid 2px;
+  height: 56px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  & p {
+    margin: 0;
+    font-family: "Chivo", "sans-serif";
+    font-size: 14px;
+  }
+}

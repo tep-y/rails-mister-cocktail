@@ -1,12 +1,8 @@
-.text-break {
-  width: 100%;
-  height: 580px;
-}
-
-.what-container {
+.what-grids {
   display: grid;
   grid-template-columns: 50% 50%;
-  height: 100%;
+  width: 100%;
+  height: 580px;
   position: relative;
 
   .blob-what-green {
@@ -32,7 +28,6 @@
   text-align: right;
 
   & h1 {
-      font-size: 92px;
       line-height: 1;
   }
 }
@@ -50,5 +45,5 @@
   background: image-url('break_banner.jpg') no-repeat center center fixed;
   background-size: cover;
   width: 100%;
-  height: 250px;
+  height: 400px;
 }
