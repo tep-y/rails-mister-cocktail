@@ -34,11 +34,6 @@
   justify-content: center;
 }
 
-// .panel-02 img {
-//   margin: 0;
-//   position: relative;
-// }
-
 .panel-02 h1 {
   position: absolute;
   width: 440px;
@@ -54,6 +49,20 @@
   color: $burgundy;
   background-color: white;
 }
+
+.text-break {
+  width: 100%;
+  height: 580px;
+}
+
+.banner-image {
+  background: image-url('break_banner.jpg') no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+}
+
+
 
 .container {
   margin-bottom: 72px;
