@@ -1,0 +1,57 @@
+.background-cover {
+  background: image-url('banner.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+  padding: 0;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.cover-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+  position: relative;
+}
+
+.main-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $light-grey;
+  padding: 0 144px 0 144px;
+
+  & a {
+    color: black;
+    font-family: "Chivo";
+    font-size: 12px;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
+}
+
+.panel-02 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-02 h1 {
+  position: absolute;
+  width: 440px;
+  top: 250px;
+  left: 96px;
+  font-weight: bold;
+  font-size: 36px;
+  color: white;
+
+  & .highlight {
+    color: #7A0F1A;
+    background-color: white;
+  }
+}
+
