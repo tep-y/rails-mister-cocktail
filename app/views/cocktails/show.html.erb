@@ -4,11 +4,15 @@
   <%# cl_image_tag @cocktail.photo.key, width: 300 %>
   <div class="card-product-infos">
     <h1><%= @cocktail.name %></h1>
+    <p><%= @cocktail.description %></p>
     <% @cocktail.doses.each do |dose| %>
       <p><%= "#{dose.description} #{dose.ingredient.name}" %>
       <%= link_to icon('fas', 'ban'), dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }  %>
        </p>
     <% end %>
+    <%= image_tag "#{@cocktail.name}.jpg", height: 300 %> 
+
   <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "add-link" %>
   </div>
 </div>
+
