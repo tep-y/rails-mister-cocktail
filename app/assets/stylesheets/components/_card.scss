@@ -2,14 +2,15 @@
   height: 494px;
   margin-top: 64px;
   display: flex;
-
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
   // border: red solid 2px;
   width: 184px;
   height: 244px;
-  margin: 12px;
+  margin: 36px;
 
   & img {
     width: 100%;
