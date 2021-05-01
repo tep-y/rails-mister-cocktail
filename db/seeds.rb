@@ -28,20 +28,6 @@ end
 puts 'Creating Cocktails..'
 puts '...'
 
-alc = [
-  'tequila', 'rum', 'vodka', 'gin', 'whisk(e)y', 'brandy', 
-  'vermouth', 'liquer', 'non-alcoholic', 'beer', 'wine', 'other'
-]
-
-# 10.times do
-#   Cocktail.create(
-#     name: Faker::Coffee.blend_name,
-#     description: Faker::Lorem.paragraph,
-#     alcohol: alc.sample
-#   )
-#   # c.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
-# end
-
 mojito = Cocktail.create!(
   name: 'mojito',
   description: 'Gather the ingredients.
@@ -222,6 +208,44 @@ last_word = Cocktail.create!(
   kind: 'classic',
   tag: 'last_word'
 )
+
+daiquiri = Cocktail.create!(
+  name: 'daiquiri',
+  description: 'Add the rum, lime juice and demerara sugar syrup 
+  to a shaker with ice, and shake until well-chilled.
+  Strain into a chilled coupe.
+  Garnish with a lime twist.',
+  ingredient: '2 ounces light rum
+  1 ounce lime juice, freshly squeezed
+  3/4 ounce demerara sugar syrup
+  Garnish: lime twist',
+  alcohol: 'rum',
+  rating: '4',
+  kind: 'classic',
+  tag: 'daiquiri'
+)
+
+alcohol = [
+  'tequila', 'rum', 'vodka', 'gin', 'whisk(e)y', 'brandy', 
+  'vermouth', 'liquer', 'non-alcoholic', 'beer', 'wine', 'other'
+]
+
+ing = "#{Faker::Food.measurement} #{Faker::Food.ingredient}"
+
+faker_array = []
+5.times do |n|
+  faker_array.push(Faker::Food.ingredient)
+end
+
+10.times do
+  Cocktail.create(
+    name: Faker::Coffee.unique.blend_name,
+    description: Faker::Food.description,
+    ingredient: faker_array,
+    alcohol: alcohol.sample
+  )
+  # c.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
+end
 
 # file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 # article = Cocktail.create!(name: 'NES', description: "A great console")

@@ -1,9 +1,14 @@
 .cocktail-cards {
-  height: 494px;
+  height: auto;
   margin-top: 64px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  &::after {
+    content: "";
+    flex: auto;
+  }
 }
 
 .card {
@@ -18,7 +23,6 @@
     object-fit: cover;
   }
 }
-
 
 
 
