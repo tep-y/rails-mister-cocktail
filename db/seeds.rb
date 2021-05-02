@@ -28,18 +28,43 @@ end
 puts 'Creating Cocktails..'
 puts '...'
 
+
+
+alcohol = [
+  'tequila', 'rum', 'vodka', 'gin', 'whisk(e)y', 'brandy', 
+  'vermouth', 'liquer', 'non-alcoholic', 'beer', 'wine', 'other'
+]
+
+rand_num = rand(3..7)
+
+faker_array = []
+rand_num.times do
+  faker_array << Faker::Food.measurement
+  faker_array << Faker::Food.ingredient
+end
+
+i = faker_array.map { |n| n.strip }
+ing_cocktail = i.join(" ")
+
+12.times do
+  Cocktail.create!(
+    name: Faker::Coffee.unique.blend_name,
+    description: Faker::Food.description,
+    ingredient: ing_cocktail,
+    alcohol: alcohol.sample,
+    kind: 'creation',
+    rating: rand(1..5),
+    tag: "http://source.unsplash.com/collection/96656859/#{rand(109)}"
+  )
+  # c.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
+end
+
 mojito = Cocktail.create!(
   name: 'mojito',
-  description: 'Gather the ingredients.
-  In a highball glass, add the sugar, mint leaves, and a splash of the club soda.
-  Muddle just enough to dissolve the sugar and release the flavor of the mint.
-  Squeeze the juice from the 2 halves of lime into the glass. Drop 1 squeezed half into the glass if you like.
-  Add the rum and stir well.
-  Fill the glass with ice cubes and top with club soda
-  Garnish with a mint sprig. Serve and enjoy.',
-  ingredient: '2 teaspoons superfine sugar
-  6 to 8 fresh mint leaves
-  2 to 3 ounces club soda, divided; to taste
+  description: 'Gather the ingredients. In a highball glass, add the sugar, mint leaves, and a splash of the club soda. Muddle just enough to dissolve the sugar and release the flavor of the mint. Squeeze the juice from the 2 halves of lime into the glass. Drop 1 squeezed half into the glass if you like. Add the rum and stir well. Fill the glass with ice cubes and top with club soda. Garnish with a mint sprig. Serve and enjoy.',
+  ingredient: '2 teaspoons superfine sugar 
+  6 to 8 fresh mint leaves 
+  2 to 3 ounces club soda, divided; to taste 
   1 lime
   2 ounces light rum
   Mint sprig, garnish',
@@ -51,12 +76,9 @@ mojito = Cocktail.create!(
 
 pina = Cocktail.create!(
   name: 'piña colada',
-  description: 'Add the rum, cream of coconut and pineapple 
-  and lime juices to a shaker with ice and shake vigorously for 20 to 30 seconds.
-  Strain into a chilled Hurricane glass over pebble ice.
-  Garnish with a pineapple wedge and pineapple leaf.',
+  description: 'Add the rum, cream of coconut and pineapple and lime juices to a shaker with ice and shake vigorously for 20 to 30 seconds. Strain into a chilled Hurricane glass over pebble ice. Garnish with a pineapple wedge and pineapple leaf.',
   ingredient: '2 ounces light rum
-  1 1/2 ounces cream of coconut
+1 1/2 ounces cream of coconut
   1 1/2 ounces pineapple juice
   1/2 ounce lime juice, freshly squeezed
   Garnish: pineapple wedge
@@ -69,10 +91,7 @@ pina = Cocktail.create!(
 
 old_fash = Cocktail.create!(
   name: 'old fashioned',
-  description: 'Add the sugar and bitters to a rocks glass, 
-  then add water, and stir until sugar is nearly dissolved.
-  Fill the glass with large ice cubes, add the bourbon, and gently stir to combine.
-  Express the oil of an orange peel over the glass, then drop in.',
+  description: 'Add the sugar and bitters to a rocks glass, then add water, and stir until sugar is nearly dissolved. Fill the glass with large ice cubes, add the bourbon, and gently stir to combine. Express the oil of an orange peel over the glass, then drop in.',
   ingredient: '1/2 teaspoon sugar
   3 dashes Angostura bitters
   1 teaspoon water
@@ -86,10 +105,7 @@ old_fash = Cocktail.create!(
 
 negroni = Cocktail.create!(
   name: 'negroni',
-  description: 'Add the gin, Campari and sweet vermouth to a 
-  mixing glass filled with ice, and stir until well-chilled.
-  Strain into a rocks glass filled with large ice cubes.
-  Garnish with an orange peel.',
+  description: 'Add the gin, Campari and sweet vermouth to a mixing glass filled with ice, and stir until well-chilled. Strain into a rocks glass filled with large ice cubes. Garnish with an orange peel.',
   ingredient: '1 ounce gin
   1 ounce Campari
   1 ounce sweet vermouth
@@ -102,12 +118,7 @@ negroni = Cocktail.create!(
 
 margarita = Cocktail.create!(
   name: 'margarita',
-  description: 'Add tequila, orange liqueur, lime juice and agave syrup to a cocktail shaker filled with ice, and shake until well-chilled.
-
-
-  Strain into a rocks glass over fresh ice.
-  
-  Garnish with a lime wheel and kosher salt (optional).',
+  description: 'Add tequila, orange liqueur, lime juice and agave syrup to a cocktail shaker filled with ice, and shake until well-chilled. Strain into a rocks glass over fresh ice. Garnish with a lime wheel and kosher salt (optional).',
   ingredient: '2 ounces blanco tequila
   1/2 ounce orange liqueur
   1 ounce lime juice, freshly squeezed
@@ -122,11 +133,7 @@ margarita = Cocktail.create!(
 
 caesar = Cocktail.create!(
   name: 'bloody caesar',
-  description: 'Coat the rim of a tall glass with celery salt, fill with ice and set aside.
-  Add the vodka, Clamato juice, Worcestershire sauce, Tabasco and horseradish into a mixing glass with ice.
-  Pour back and forth into another mixing glass a few times to combine.
-  Strain into the prepared glass.
-  Garnish with a cucumber spear, lime wedge and celery stalk.',
+  description: 'Coat the rim of a tall glass with celery salt, fill with ice and set aside. Add the vodka, Clamato juice, Worcestershire sauce, Tabasco and horseradish into a mixing glass with ice. Pour back and forth into another mixing glass a few times to combine. Strain into the prepared glass. Garnish with a cucumber spear, lime wedge and celery stalk.',
   ingredient: 'Celery salt, to rim glass
   1 1/2 ounces vodka
   4 ounces Clamato juice
@@ -144,9 +151,7 @@ caesar = Cocktail.create!(
 
 moscow = Cocktail.create!(
   name: 'moscow mule',
-  description: 'Fill a Moscow Mule mug (or highball glass) with ice, then add the vodka and lime juice.
-  Add the ginger beer.
-  Garnish with a lime wheel.',
+  description: 'Fill a Moscow Mule mug (or highball glass) with ice, then add the vodka and lime juice. Add the ginger beer. Garnish with a lime wheel.',
   ingredient: '2 ounces vodka
   1/2 ounce lime juice, freshly squeezed
   3 ounces ginger beer
@@ -159,10 +164,7 @@ moscow = Cocktail.create!(
 
 vieux_carre = Cocktail.create!(
   name: 'vieux carré',
-  description: 'Add the rye whiskey, cognac, sweet vermouth, 
-  Bénédictine and bitters into a mixing glass with ice and stir until well-chilled.
-  Strain into a rocks glass over fresh ice or a cocktail glass.
-  Garnish with a cherry, a lemon twist or both.',
+  description: 'Add the rye whiskey, cognac, sweet vermouth, Bénédictine and bitters into a mixing glass with ice and stir until well-chilled. Strain into a rocks glass over fresh ice or a cocktail glass. Garnish with a cherry, a lemon twist or both.',
   ingredient: '3/4 ounce George Dickel rye whiskey
   3/4 ounce cognac
   3/4 ounce sweet vermouth
@@ -177,10 +179,7 @@ vieux_carre = Cocktail.create!(
 
 sidecar = Cocktail.create!(
   name: 'sidecar',
-  description: 'Coat the rim of a coupe glass with sugar, if desired, and set aside.
-  Add the cognac, orange liqueur and lemon juice to a shaker with ice and shake until well-chilled.
-  Strain into the prepared glass.
-  Garnish with an orange twist.',
+  description: 'Coat the rim of a coupe glass with sugar, if desired, and set aside. Add the cognac, orange liqueur and lemon juice to a shaker with ice and shake until well-chilled. Strain into the prepared glass. Garnish with an orange twist.',
   ingredient: '1 1/2 ounces cognac
   3/4 ounce orange liqueur (such as Cointreau)
   3/4 ounce lemon juice, freshly squeezed
@@ -194,10 +193,7 @@ sidecar = Cocktail.create!(
 
 last_word = Cocktail.create!(
   name: 'last word',
-  description: 'Add the gin, green Chartreuse, 
-  maraschino liqueur and lime juice into a shaker with ice and shake until well-chilled.
-  Strain into a chilled coupe glass.
-  Garnish with a brandied cherry (optional).',
+  description: 'Add the gin, green Chartreuse, maraschino liqueur and lime juice into a shaker with ice and shake until well-chilled. Strain into a chilled coupe glass. Garnish with a brandied cherry (optional).',
   ingredient: '3/4 ounce gin
   3/4 ounce green Chartreuse
   3/4 ounce maraschino liqueur
@@ -211,10 +207,7 @@ last_word = Cocktail.create!(
 
 daiquiri = Cocktail.create!(
   name: 'daiquiri',
-  description: 'Add the rum, lime juice and demerara sugar syrup 
-  to a shaker with ice, and shake until well-chilled.
-  Strain into a chilled coupe.
-  Garnish with a lime twist.',
+  description: 'Add the rum, lime juice and demerara sugar syrup to a shaker with ice, and shake until well-chilled. Strain into a chilled coupe. Garnish with a lime twist.',
   ingredient: '2 ounces light rum
   1 ounce lime juice, freshly squeezed
   3/4 ounce demerara sugar syrup
@@ -224,29 +217,6 @@ daiquiri = Cocktail.create!(
   kind: 'classic',
   tag: 'daiquiri'
 )
-
-alcohol = [
-  'tequila', 'rum', 'vodka', 'gin', 'whisk(e)y', 'brandy', 
-  'vermouth', 'liquer', 'non-alcoholic', 'beer', 'wine', 'other'
-]
-
-ing = "#{Faker::Food.measurement} #{Faker::Food.ingredient}"
-
-faker_array = []
-5.times do |n|
-  faker_array.push(Faker::Food.ingredient)
-end
-
-10.times do
-  Cocktail.create(
-    name: Faker::Coffee.unique.blend_name,
-    description: Faker::Food.description,
-    ingredient: faker_array,
-    alcohol: alcohol.sample
-  )
-  # c.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
-end
-
 # file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 # article = Cocktail.create!(name: 'NES', description: "A great console")
 # article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')

@@ -47,13 +47,16 @@
         </div>
         <div class="cocktail-cards">
         
-          <% @cocktails.sort_by(&:name).each do |cocktail| %>
+          <% @cocktails.order('lower(name)').each do |cocktail| %>
             <div class="card">
               <div class="card-title">
                 <h3><%= cocktail.name.capitalize %></h3>
               </div>
               <div class="card-image">
-                <%= image_tag "#{cocktail.tag}.jpg", alt: "#{cocktail.name}" %>
+                <% if cocktail.tag %>
+                  <%= image_tag "#{cocktail.tag}.jpg", alt: "#{cocktail.name}" %>
+  
+                <% end %>
               </div>
               <div class="card-rating">
                 <p class="stars"><%= "✩" * cocktail.rating %></p>

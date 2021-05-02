@@ -1,6 +1,8 @@
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
+    # @all = @cocktails.map { |c| c.name.capitalize }
+    # @cocktails_all = @all.sort
   end
 
   def show
