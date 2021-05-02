@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_162753) do
     t.string "alcohol"
     t.string "photo"
     t.text "ingredient"
-    t.string "kind"
+    t.string "kind", default: "creation"
     t.string "tag"
   end
 

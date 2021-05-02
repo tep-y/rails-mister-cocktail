@@ -1,6 +1,7 @@
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
+    @cocktail = Cocktail.new
     # @all = @cocktails.map { |c| c.name.capitalize }
     # @cocktails_all = @all.sort
   end
@@ -16,7 +17,7 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
-      redirect_to cocktail_path(@cocktail)
+      redirect_to root_path
     else
       render :new
     end
@@ -25,6 +26,6 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :description, :alcohol, :photo, :type)
+    params.require(:cocktail).permit(:name, :ingredient, :description, :alcohol)
   end
 end

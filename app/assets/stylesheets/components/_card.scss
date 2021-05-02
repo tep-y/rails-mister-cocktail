@@ -16,6 +16,7 @@
   width: 184px;
   height: 244px;
   margin: 36px;
+  position: relative;
 
   & img {
     width: 100%;
@@ -24,6 +25,11 @@
   }
 }
 
+.card-title {
+  position: absolute;
+  top: -44px;
+  background-color: rgba(255, 247, 247, 1);
+}
 
 
 // .card-product {

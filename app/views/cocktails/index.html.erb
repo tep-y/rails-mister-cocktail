@@ -37,7 +37,7 @@
   </div>
 
   <div class="cocktail-list">
-    <div></div>
+    <div id="column-01"></div>
     <div>
       <div class="cocktail-info">
         <div class="cocktail-search">
@@ -54,8 +54,9 @@
               </div>
               <div class="card-image">
                 <% if cocktail.tag %>
-                  <%= image_tag "#{cocktail.tag}.jpg", alt: "#{cocktail.name}" %>
-  
+                  <%= image_tag "#{cocktail.tag}", alt: "#{cocktail.name}" %>
+                <% else %>
+                  <%= image_tag "cocktail_card.jpg", alt: "#{cocktail.name}" %>
                 <% end %>
               </div>
               <div class="card-rating">
@@ -67,11 +68,27 @@
         </div>
       </div>
     </div>
-      <div></div>
+      <div id="column-03"></div>
   </div>
-
 </div>
 
+<div class="share-container">
+  <div class="banner-image2">
+  </div>
+
+  <div class="share-grids">
+    <div class="panel-05">
+      <h1>Share<br> your recipe!</h1>
+      <%= image_tag "blob_green02.png", alt: "blob", width: "100px", class: "blob-share-green" %>
+       <%= image_tag "blob_pink.png", alt: "blob", width: "240px", class: "blob-share-pink" %>
+    </div>
+    <div class="panel-06">
+   
+      </p>
+    </div>
+  </div>
+  
+</div>
 
 
 <%

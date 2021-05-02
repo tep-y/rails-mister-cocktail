@@ -1,3 +1,7 @@
+.cocktail-container {
+  height: auto;
+}
+
 .cocktail-title {
   text-align: center;
   padding: 64px 0 18px 0;
@@ -7,11 +11,7 @@
   // border: blue solid 2px;
   display: grid;
   grid-template-columns: 1fr 1024px 1fr;
-  height: 550px;
-}
-
-.cocktail-info {
-  height: 550px;
+  min-height: 100vh;
 }
 
 .cocktail-search {

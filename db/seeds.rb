@@ -28,11 +28,9 @@ end
 puts 'Creating Cocktails..'
 puts '...'
 
-
-
 alcohol = [
   'tequila', 'rum', 'vodka', 'gin', 'whisk(e)y', 'brandy', 
-  'vermouth', 'liquer', 'non-alcoholic', 'beer', 'wine', 'other'
+  'vermouth', 'liqueur', 'non-alcoholic', 'beer', 'wine', 'other'
 ]
 
 rand_num = rand(3..7)
@@ -53,8 +51,7 @@ ing_cocktail = i.join(" ")
     ingredient: ing_cocktail,
     alcohol: alcohol.sample,
     kind: 'creation',
-    rating: rand(1..5),
-    tag: "http://source.unsplash.com/collection/96656859/#{rand(109)}"
+    rating: rand(1..5)
   )
   # c.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
 end
@@ -71,7 +68,7 @@ mojito = Cocktail.create!(
   alcohol: 'rum',
   rating: '4',
   kind: 'classic',
-  tag: 'mojito'
+  tag: 'mojito.jpg'
 )
 
 pina = Cocktail.create!(
@@ -86,7 +83,7 @@ pina = Cocktail.create!(
   alcohol: 'rum',
   rating: '3',
   kind: 'classic',
-  tag: 'pina'
+  tag: 'pina.jpg'
 )
 
 old_fash = Cocktail.create!(
@@ -100,7 +97,7 @@ old_fash = Cocktail.create!(
   alcohol: 'whisk(e)y',
   rating: '3',
   kind: 'classic',
-  tag: 'old_fash'
+  tag: 'old_fash.jpg'
 )
 
 negroni = Cocktail.create!(
@@ -113,7 +110,7 @@ negroni = Cocktail.create!(
   alcohol: 'gin',
   rating: '5',
   kind: 'classic',
-  tag: 'negroni'
+  tag: 'negroni.jpg'
 )
 
 margarita = Cocktail.create!(
@@ -128,7 +125,7 @@ margarita = Cocktail.create!(
   alcohol: 'tequila',
   rating: '5',
   kind: 'classic',
-  tag: 'margarita'
+  tag: 'margarita.jpg'
 )
 
 caesar = Cocktail.create!(
@@ -146,7 +143,7 @@ caesar = Cocktail.create!(
   alcohol: 'vodka',
   rating: '4',
   kind: 'classic',
-  tag: 'caesar'
+  tag: 'caesar.jpg'
 )
 
 moscow = Cocktail.create!(
@@ -159,7 +156,7 @@ moscow = Cocktail.create!(
   alcohol: 'vodka',
   rating: '4',
   kind: 'classic',
-  tag: 'moscow'
+  tag: 'moscow.jpg'
 )
 
 vieux_carre = Cocktail.create!(
@@ -174,7 +171,7 @@ vieux_carre = Cocktail.create!(
   alcohol: 'brandy',
   rating: '4',
   kind: 'classic',
-  tag: 'vieux_carre'
+  tag: 'vieux_carre.jpg'
 )
 
 sidecar = Cocktail.create!(
@@ -188,7 +185,7 @@ sidecar = Cocktail.create!(
   alcohol: 'brandy',
   rating: '4',
   kind: 'classic',
-  tag: 'sidecar'
+  tag: 'sidecar.jpg'
 )
 
 last_word = Cocktail.create!(
@@ -202,7 +199,7 @@ last_word = Cocktail.create!(
   alcohol: 'gin',
   rating: '5',
   kind: 'classic',
-  tag: 'last_word'
+  tag: 'last_word.jpg'
 )
 
 daiquiri = Cocktail.create!(
@@ -215,7 +212,7 @@ daiquiri = Cocktail.create!(
   alcohol: 'rum',
   rating: '4',
   kind: 'classic',
-  tag: 'daiquiri'
+  tag: 'daiquiri.jpg'
 )
 # file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 # article = Cocktail.create!(name: 'NES', description: "A great console")
