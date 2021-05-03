@@ -17,9 +17,10 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
-      redirect_to root_path
+      redirect_to root_path(anchor: 'cocktails')
     else
-      render :new
+      flash[:cocktail_errors] = @cocktail.errors.full_messages
+      redirect_to root_path(anchor: 'share')
     end
   end
 
