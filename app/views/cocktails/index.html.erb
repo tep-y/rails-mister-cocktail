@@ -1,4 +1,5 @@
 <%= render "landing" %>
+<%= link_to '<i class="fas fa-chevron-circle-up"></i>'.html_safe, "#", class: "top-link hide", id: "js-top" %></i> 
 
 <div class="what-anchor" id="what">
 </div>
@@ -129,11 +130,7 @@
     </div>
   </div>
 
-  <div class="back-top">
-    <span id="link-top">
-      <%= link_to '<i class="fas fa-chevron-circle-up"></i>'.html_safe, root_path(:anchor => "top") %></i>
-    </span>
-  </div>
+
 
 </div>
 
@@ -168,13 +165,38 @@
   </div>
 </div>
 
+
+
+
+
+<script>
+const scrollToTopButton = document.getElementById("js-top");
+
+const scrollFunc = () => {
+    let y = window.scrollY;
+    console.log(window.scrollY);
+    if (y > 650) {
+      scrollToTopButton.className = "top-link show";
+    } else {
+      scrollToTopButton.className = "top-link hide";
+    }
+};
+
+window.addEventListener("scroll", scrollFunc);
+
+const scrollToTop = () => {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 10);
+  }
+};
+</script>
 <%
 =end %>
 
-
-
-
-
+<%= javascript_pack_tag 'back-to-top', 'data-turbolinks-track': 'reload' %>
 
 <div class="footer">
   <p>© 2021 Tep Y. All rights reserved.</p>

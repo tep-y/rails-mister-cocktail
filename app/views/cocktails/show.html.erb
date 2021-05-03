@@ -1,3 +1,6 @@
+<%
+=begin %>
+
 <%= render 'navbar.html.erb' %>
 
 <div class="card-product">
@@ -15,4 +18,56 @@
   <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "add-link" %>
   </div>
 </div>
+-->
 
+<%
+=end %>
+
+<h1>hello!</h1>
+
+<button class="btn">Click Me</button>
+<button class="btn2">Click Me 2</button>
+
+<script>
+  // grab button element
+  const button = document.querySelector('.btn');
+ const button2 = document.querySelector('.btn2');
+
+const addHide = () => {
+  // hide an element
+      document.querySelector('.btn').classList.add('hidden');
+
+  // // show an element
+  // const show = (elem) => {
+  //     elem.classList.remove('hidden');
+  // }
+
+  // // toggle the element visibility
+  // const toggle = (elem) => {
+  //     elem.classList.toggle('hidden');
+  // }
+
+};
+
+const addShow = () => {
+  const show = (elem) => {
+      elem.classList.remove('hidden');
+  }
+
+  show(document.querySelector('.btn'));
+};
+// hide(document.querySelector('.btn'));
+
+  button.onclick = function(e) {
+    e.preventDefault();
+    addHide();
+  }
+
+  button2.onclick = function(e) {
+    e.preventDefault();
+    addShow();
+  }
+
+
+
+</script>
