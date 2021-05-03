@@ -1,0 +1,44 @@
+form {
+  font-family: "PT serif", "serif";
+  font-size: 14px;
+  display: grid;
+}
+
+label {
+  display:block;
+  color: black;
+  margin: 16px 0 3px;
+}
+
+input,
+textarea,
+select {
+  width: 60%;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: white;
+  border: solid 1px $burgundy;
+  font-family: "Chivo", "sans-serif";
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+input[type=submit]{
+  width: 164px;
+  margin-top: 36px;
+  background-color: pink;
+  color:black;
+  border: black solid 1px;
+  padding: 6px 20px;
+  font-size: 14px;
+  font-family: "Chivo", "serif";
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: $pink solid 3px;
+}

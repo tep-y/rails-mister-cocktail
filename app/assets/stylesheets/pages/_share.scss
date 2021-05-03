@@ -11,32 +11,46 @@
 
 .share-grids {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 33% 66%;
   width: 100%;
   height: 580px;
   position: relative;
 
   .blob-share-green {
     position: absolute;
-    top: 288px;
-    left: 200px;
+    top: 448px;
+    left: 160px;
     z-index: -3;
   }
 
   .blob-share-pink {
     position: absolute;
-    top: 300px;
+    top: 320px;
     left: 200px;
     z-index: -4;
   }
+
+  .blob-share-pink2 {
+    position: absolute;
+    top: -20px;
+    left: 1310px;
+    z-index: 1;
+  }
+}
+
+.share-title {
+  display: block;
+  float: right;
+  width: 400px;
+  text-align: right;
 }
 
 .panel-05 {
   border-right: $dark-green solid 2px;
   margin: 88px 0 88px 0;
   padding-right: 48px;
-  padding-left: 198px;
-  text-align: right;
+  // padding-left: 8px;
+  // text-align: right;
 
   & h1 {
       line-height: 1;

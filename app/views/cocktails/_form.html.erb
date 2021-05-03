@@ -1,0 +1,16 @@
+<% alcohol = [
+  'tequila', 'rum', 'vodka', 'gin', 'whisk(e)y', 'brandy', 
+  'vermouth', 'liqueur', 'beer', 'wine', 'non-alcoholic', 'other'
+] %>
+
+<div class="create-form">
+  <%= simple_form_for @cocktail do |c| %>
+    <%= c.input :name, label: "Name (max. 20 characters)", :maxlength => 20 %>
+    <%# c.input :photo, as: :file %>
+    <%= c.input :ingredient %>
+    <%= c.input :description %>
+    <%= c.label :alcohol %>
+    <%= c.select :alcohol, alcohol, :prompt => 'Select One', placeholder: "hello"  %>
+    <%= c.submit "Share cocktail" %>
+  <% end %>
+</div>
