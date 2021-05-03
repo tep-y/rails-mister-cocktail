@@ -1,10 +1,10 @@
-<div class="main-container">
+<div class="landing-container" id="top">
     <div class="main-bar">
-      <%= link_to "what?", root_path %>
-      <%= link_to "who?", root_path %>
+      <%= link_to "what?", root_path(:anchor => "what") %>
+      <%= link_to "who?", root_path(:anchor => "who") %>
       <%= image_tag "logo.png", alt: "logo", width: "220px" %>
-      <%= link_to "cocktails!", root_path %>
-      <%= link_to "#share", root_path %>
+      <%= link_to "cocktails!", root_path(:anchor => "cocktails") %>
+      <%= link_to "#share", root_path(:anchor => "share") %>
     </div>
   <div class="background-cover">
     <div class="cover-container">

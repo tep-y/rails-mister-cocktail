@@ -1,5 +1,7 @@
 <%= render "landing" %>
 
+<div class="what-anchor" id="what">
+</div>
 <div class="what-container">
   <div class="what-grids">
     <div class="panel-03">
@@ -32,6 +34,7 @@
   </div>
 </div>
 
+<div class="cocktail-anchor" id="cocktails"></div>
 <div class="cocktail-container">
 
   <div class="cocktail-title">
@@ -78,7 +81,7 @@
   <div class="banner-image2">
   </div>
 
-  <div class="share-grids">
+  <div class="share-grids" id="share">
     <div class="panel-05">
       <div class="share-title">
         <h1>Share your recipe!</h1>
@@ -95,7 +98,7 @@
   
 </div>
 
-<div class="who-container">
+<div class="who-container" id="who">
   <div class="who-grids">
     <div class="panel-07">
       <div class="who-title">
@@ -127,8 +130,8 @@
   </div>
 
   <div class="back-top">
-    <span id="top">
-      <%= link_to '<i class="fas fa-chevron-circle-up"></i>'.html_safe, "https://instagram.com/robauheart", target: :_blank %></i>
+    <span id="link-top">
+      <%= link_to '<i class="fas fa-chevron-circle-up"></i>'.html_safe, root_path(:anchor => "top") %></i>
     </span>
   </div>
 

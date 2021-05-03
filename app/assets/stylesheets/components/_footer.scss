@@ -1,0 +1,58 @@
+.back-to-top-link {
+  // text-align: right;
+  margin-right: 44px;
+  padding-bottom: 44px;
+  display: inline-block;
+  color: white;
+  font-size: 48px;
+
+    // `fixed` is fallback when `sticky` not supported
+    position: fixed;
+    // preferred positioning, requires prefixing for most support, and not supported on Safari
+    // @link https://caniuse.com/#search=position%3A%20sticky
+    position: sticky;
+    // reinstate clicks
+    pointer-events: all;
+    // achieves desired positioning within the viewport
+    // relative to the top of the viewport once `sticky` takes over, or always if `fixed` fallback is used
+    top: calc(100vh - 5rem);
+  
+    // ... styles written earlier
+    
+  &:hover {
+    color: $pink;
+  }
+}
+
+$scrollLength: 100vh;
+
+.back-to-top-wrapper {
+  // uncomment to visualize "track"
+  outline: 1px solid red;
+  position: absolute;
+  top: 0;
+  right: 0.25rem;
+  // Optional, extends the final link into the
+  // footer at the bottom of the page
+  // Set to `0` to stop at the end of `main`
+  bottom: -5em;
+  // Required for best support in browsers not supporting `sticky`
+  width: 3em;
+  // Disable interaction with this element
+  pointer-events: none;
+}
+
+main {
+  // leave room for the "scroll track"
+  padding: 0 3rem;
+  // required to make sure the `absolute` positioning of
+  // the anchor wrapper is indeed `relative` to this element vs. the body
+  position: relative;
+  max-width: 50rem;
+  margin: 2rem auto;
+
+  // Optional, clears margin if last element is a block item
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
