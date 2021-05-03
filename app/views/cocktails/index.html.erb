@@ -3,7 +3,9 @@
 <div class="what-container">
   <div class="what-grids">
     <div class="panel-03">
-      <h1>What<br> is this about?</h1>
+      <div class="what-title">
+        <h1>What is this about?</h1>
+      </div>
       <%= image_tag "blob_green03.png", alt: "blob", width: "150px", class: "blob-what-green" %>
       <%= image_tag "blob_pink03.png", alt: "blob", width: "80px", class: "blob-what-pink" %>
     </div>
@@ -93,6 +95,44 @@
   
 </div>
 
+<div class="who-container">
+  <div class="who-grids">
+    <div class="panel-07">
+      <div class="who-title">
+       <h1>But who made me crave a cocktail?</h1>
+      </div>
+      <%= image_tag "blob_white03.png", alt: "blob", width: "100px", class: "blob-who-white" %>
+    </div>
+    <div class="panel-08">
+      <p>
+        Hello! <br><br>My name is Tep, and it's my fault if you find yourself thirsty for a delicious cocktail!
+        I coded and designed this website for a school assignment so don't take the recipes too seriously.
+        
+        <br><br>
+        A newly gradute from a coding bootcamp, this website is part of my portfolio. If you want to know more about it 
+        or about me, feel free to contact me. I'll be glad to answer any of your questions and/or listen to your feedback. 
+        I can even give you some <strong>real</strong> cocktail recipes.
+
+        <br><br>
+
+        <span id="icon">
+        <%= link_to '<i class="fab fa-linkedin">'.html_safe, "https://www.linkedin.com/in/tep-y/", target: :_blank %></i>
+        <%= link_to '<i class="fab fa-github-square"></i>'.html_safe, "https://github.com/tep-y", target: :_blank %></i>
+        <%= link_to '<i class="fab fa-instagram-square"></i><br>'.html_safe, "https://instagram.com/robauheart", target: :_blank %></i>
+        <!-- CHANGE TO PORTFOLIO LINK -->
+        <%= link_to '<i class="far fa-id-card"></i>'.html_safe, "https://instagram.com/robauheart", target: :_blank %></i>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <div class="back-top">
+    <span id="top">
+      <%= link_to '<i class="fas fa-chevron-circle-up"></i>'.html_safe, "https://instagram.com/robauheart", target: :_blank %></i>
+    </span>
+  </div>
+
+</div>
 
 <%
 =begin %>
@@ -134,6 +174,6 @@
 
 
 <div class="footer">
-  <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+  <p>© 2021 Tep Y. All rights reserved.</p>
 </div>
 

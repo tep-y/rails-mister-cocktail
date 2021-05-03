@@ -1,5 +1,5 @@
 .share-container {
-  padding: 88px 0 0 0;
+  padding: 116px 0 116px 0;
 }
 
 .banner-image2 {
@@ -32,7 +32,7 @@
 
   .blob-share-pink2 {
     position: absolute;
-    top: -20px;
+    top: 544px;
     left: 1310px;
     z-index: 1;
   }
@@ -46,11 +46,8 @@
 }
 
 .panel-05 {
-  border-right: $dark-green solid 2px;
   margin: 88px 0 88px 0;
   padding-right: 48px;
-  // padding-left: 8px;
-  // text-align: right;
 
   & h1 {
       line-height: 1;

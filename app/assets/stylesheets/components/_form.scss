@@ -8,6 +8,7 @@ label {
   display:block;
   color: black;
   margin: 16px 0 3px;
+  font-family: "PT Serif", "serif";
 }
 
 input,
@@ -26,6 +27,12 @@ textarea {
   resize: none;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  outline: $pink solid 3px;
+}
+
 input[type=submit]{
   width: 164px;
   margin-top: 36px;
@@ -35,10 +42,4 @@ input[type=submit]{
   padding: 6px 20px;
   font-size: 14px;
   font-family: "Chivo", "serif";
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: $pink solid 3px;
 }

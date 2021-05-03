@@ -13,8 +13,6 @@
 @import "pages/index";
 
 // @import "cocktails";
-@import "font-awesome-sprockets";
-@import "font-awesome";
 
 body {
   background-color: $light-grey;
@@ -23,6 +21,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -51,14 +50,18 @@ p {
 
 a {
   text-decoration: none;
-  color: red;
+  color: $burgundy;
 
   &:hover {
-  text-decoration: none;
+  text-decoration: underline;
 
   }
 }
 
+#top {
+  font-size: 40px;
+  color: white;
+}
 // #content-bar {
 //   height: 32px;
 //   background-color: blue;
@@ -81,5 +84,8 @@ a {
 .footer {
   font-size: 10px;
   text-align: right;
-  margin-right: 4px;
+
+  & p {
+    margin: 0;
+  }
 }
