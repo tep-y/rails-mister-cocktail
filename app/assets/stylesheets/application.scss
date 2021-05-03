@@ -12,8 +12,6 @@
 @import "components/index";
 @import "pages/index";
 
-// @import "cocktails";
-
 body {
   background-color: $light-grey;
   margin: 0;
@@ -63,24 +61,6 @@ a {
   font-size: 40px;
   color: white;
 }
-// #content-bar {
-//   height: 32px;
-//   background-color: blue;
-//   font-size: 12px;
-
-//   p {
-//     margin: 6px auto;
-//   }
-// }
-
-// .main-logo {
-//   width: 30%;
-//   height: auto;
-// }
-
-// .form-description {
-//   resize: none;
-// }
 
 .footer {
   font-size: 10px;

@@ -3,7 +3,7 @@ const scrollToTopButton = document.getElementById("js-top");
 const scrollFunc = () => {
     let y = window.scrollY;
     
-    if (y > 650) {
+    if (y > 620) {
       scrollToTopButton.className = "top-link show";
     } else {
       scrollToTopButton.className = "top-link hide";

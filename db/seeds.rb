@@ -44,9 +44,9 @@ end
 i = faker_array.map { |n| n.strip }
 ing_cocktail = i.join(" ")
 
-12.times do
+7.times do
   Cocktail.create!(
-    name: Faker::Coffee.unique.blend_name,
+    name: Faker::Coffee.unique.blend_name[0..12],
     description: Faker::Food.description,
     ingredient: ing_cocktail,
     alcohol: alcohol.sample,
