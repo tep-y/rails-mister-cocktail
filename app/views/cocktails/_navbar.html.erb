@@ -1,12 +1,7 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <%= link_to "Freepour Cocktails", root_path, class: "nav-link" %>
-  <div class="navbar" >
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to root_path do %>
-          <%= image_tag "cocktail_icon_main.png", width: "30", class: "icon-link" %>
-        <% end %>
-      </li>
-    </ul>
-  </div>
+<div class="main-bar">
+  <%= link_to "what?", root_path(:anchor => "what") %>
+  <%= link_to "who?", root_path(:anchor => "who") %>
+  <%= image_tag "logo.png", alt: "logo", width: "220px" %>
+  <%= link_to "cocktails!", root_path(:anchor => "cocktails") %>
+  <%= link_to "#share", root_path(:anchor => "share") %>
 </div>

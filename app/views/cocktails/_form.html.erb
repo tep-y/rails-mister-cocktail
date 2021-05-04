@@ -13,16 +13,16 @@
     <%= c.label :alcohol %>
     <%= c.select :alcohol, alcohol, :prompt => 'Select One', placeholder: "hello"  %>
     <%= c.submit "Share cocktail" %>
-  
   </div>
-    <div class="error-msg">
-      <% if flash[:cocktail_errors] %>
-        <ul>
-          <% flash[:cocktail_errors].each do |msg| %>
-            <li>x <%= msg %></li>
-          <% end %>
-        </ul>
+
+  <div class="error-msg">
+    <% if flash[:cocktail_errors] %>
+      <ul>
+        <% flash[:cocktail_errors].each do |msg| %>
+          <li>x <%= msg %></li>
+        <% end %>
+      </ul>
     <% end %>
-    </div>
+  </div>
   <% end %>
 </div>

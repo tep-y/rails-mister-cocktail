@@ -1,5 +1,62 @@
+<div class="show-container">
+  <%= render 'navbar' %>
+
+  <div class="show-content">
+    <div class="show-cocktail">
+      <% if @cocktail.tag %>
+        <div class="cocktail-image" style="background: url('<%= image_url @cocktail.tag %>') center; background-size: cover;">
+      <% else %>
+        <div class="cocktail-text">
+          <div class="text">
+          <h2>There's no image for this cocktail. But just close your eyes and 
+        image yourself on the beach, with this cocktail in your hand. The sun is shining bright, the water is cool,
+        and there's just hapiness around you. Everything is a-okay!</h2>
+          </div>
+      <% end %>
+      </div>
+
+      <div class="cocktail-infos">
+        <div class="title">
+          <h1><%= @cocktail.name.capitalize %></h1>
+        </div>
+        <div class="subtile">
+          <p class="cocktail-subtile">Main alcohol : <%= "#{@cocktail.alcohol.capitalize}" %></p>
+          <p>|</p>
+          <p>
+            <%= "#{@cocktail.rating}/5" %>
+            <%= "✩" * @cocktail.rating %>
+          </p>
+        </div>
+        <div class="ingredient">
+          <div class="ingredient-col1">
+            <h2>Ingredients :</h2>
+            <p><%= @cocktail.ingredient.html_safe %>
+            <%= @cocktail.alcohol %>
+          </div>
+          <div class="ingredient-col2">
+            <h2>Description :</h2>
+            <p><%= @cocktail.description %></p>
+          </div>
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="show-footer">
+  </div>
+
+</div>
+
 <%
 =begin %>
+
+          <p><% @ingredient.each do |i| %>
+            <%= i %>
+          <% end %></p>
+
+<%= image_tag "#{cocktail.tag}", alt: "#{cocktail.name}" %>
 
 <%= render 'navbar.html.erb' %>
 
@@ -23,51 +80,3 @@
 <%
 =end %>
 
-<h1>hello!</h1>
-
-<button class="btn">Click Me</button>
-<button class="btn2">Click Me 2</button>
-
-<script>
-  // grab button element
-  const button = document.querySelector('.btn');
- const button2 = document.querySelector('.btn2');
-
-const addHide = () => {
-  // hide an element
-      document.querySelector('.btn').classList.add('hidden');
-
-  // // show an element
-  // const show = (elem) => {
-  //     elem.classList.remove('hidden');
-  // }
-
-  // // toggle the element visibility
-  // const toggle = (elem) => {
-  //     elem.classList.toggle('hidden');
-  // }
-
-};
-
-const addShow = () => {
-  const show = (elem) => {
-      elem.classList.remove('hidden');
-  }
-
-  show(document.querySelector('.btn'));
-};
-// hide(document.querySelector('.btn'));
-
-  button.onclick = function(e) {
-    e.preventDefault();
-    addHide();
-  }
-
-  button2.onclick = function(e) {
-    e.preventDefault();
-    addShow();
-  }
-
-
-
-</script>
