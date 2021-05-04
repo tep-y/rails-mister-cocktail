@@ -3,7 +3,8 @@
   'vermouth', 'liqueur', 'beer', 'wine', 'non-alcoholic', 'other'
 ] %>
 
-<div class="create-form">
+<div class="form-container">
+  <div class="create-form">
   <%= simple_form_for @cocktail do |c| %>
     <%= c.input :name, label: "Name (max. 20 characters)" %>
     <%# c.input :photo, as: :file %>
@@ -12,6 +13,9 @@
     <%= c.label :alcohol %>
     <%= c.select :alcohol, alcohol, :prompt => 'Select One', placeholder: "hello"  %>
     <%= c.submit "Share cocktail" %>
+  
+  </div>
+    <div class="error-msg">
       <% if flash[:cocktail_errors] %>
         <ul>
           <% flash[:cocktail_errors].each do |msg| %>
@@ -19,5 +23,6 @@
           <% end %>
         </ul>
     <% end %>
+    </div>
   <% end %>
 </div>
