@@ -28,6 +28,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 gem 'font_awesome5_rails'
 gem 'faker'
+gem 'pagy', '~> 3.5'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

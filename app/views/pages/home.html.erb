@@ -1,0 +1,11 @@
+<%= render :partial => "cocktails/landing" %>
+<%= link_to '<i class="fas fa-chevron-circle-up"></i>'.html_safe, "#", class: "top-link hide", id: "js-top" %></i> 
+<%= render :partial => "cocktails/what" %>
+<%= render :partial => "cocktails/share" %>
+<%= render :partial => "cocktails/who" %>
+
+<%= javascript_pack_tag 'back-to-top', 'data-turbolinks-track': 'reload' %>
+
+<div class="footer">
+  <p>© 2021 Tep Y. All rights reserved.</p>
+</div>

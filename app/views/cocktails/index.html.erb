@@ -1,36 +1,28 @@
-<%= render "landing" %>
-<%= link_to '<i class="fas fa-chevron-circle-up"></i>'.html_safe, "#", class: "top-link hide", id: "js-top" %></i> 
-<%= render "what" %>
-<%= render "cocktails" %>
-<%= render "share" %>
-<%= render "who" %>
+<%= render :partial => 'cocktails/navbar' %>
 
+<div class="cocktail-anchor" id="cocktails">
+</div>
 
+<div class="cocktail-container">
 
+  <div class="cocktail-title">
+    <h1>~ Cocktails ~</h1>
+  </div>
 
-<%
-=begin %>
+  <div class="cocktail-list">
+    <div id="column-01">
+    </div>
 
-<div class="container text-center">
-  <div class="row">
-    <div class="col-12">
-      <h1 class="cocktail-list" id="cocktail-list">Cocktail List</h1>
-      <%= image_tag "cocktail_icon.png", alt: "cocktail_icon", class: "menu-icon", width: "40px;" %>
-      <ul>
-        <% @cocktails.each do |cocktail| %>
-          <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-        <% end %>
-      </ul>
+    <div class="cocktail-info">
+      <div class="cocktail-search">
+        <p>view:</p>
+        <p>spirit</p>
+        <p>rating</p>
+      </div>
+      <%= render :partial => 'cocktails/cocktails' %>
+    </div>
+
+    <div id="column-03">
     </div>
   </div>
 </div>
-
-<%
-=end %>
-
-<%= javascript_pack_tag 'back-to-top', 'data-turbolinks-track': 'reload' %>
-
-<div class="footer">
-  <p>© 2021 Tep Y. All rights reserved.</p>
-</div>
-

@@ -1,50 +1,35 @@
-<div class="cocktail-anchor" id="cocktails"></div>
-  <div class="cocktail-container">
+<div data-controller="infinite-scroll">
+    <div data-infinite-scroll-target="entries">
 
-  <div class="cocktail-title">
-    <h1>= Cocktails =</h1>
-  </div>
-
-  <div class="cocktail-list">
-    <div id="column-01"></div>
-    <div>
-
-      <div class="cocktail-info">
-        <div class="cocktail-search">
-          <p>view:</p>
-          <p>spirit</p>
-          <p>rating</p>
+    <div class="cocktail-cards">
+      <% @cocktails.order('lower(name)').each do |cocktail| %>
+        <div class="card">
+          <div class="card-title">
+            <h3><%= cocktail.name.capitalize %></h3>
+          </div>
+          <div class="card-image">
+            <% if cocktail.tag %>
+              <%= link_to  cocktail_path(cocktail) do %>
+                <%= image_tag "#{cocktail.tag}", alt: "#{cocktail.name}" %>
+              <% end %>
+            <% else %>
+              <%= link_to  cocktail_path(cocktail) do %>
+                <%= image_tag "cocktail_card.jpg", alt: "#{cocktail.name}" %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="card-rating">
+            <p class="stars"><%= "✩" * cocktail.rating %></p>
+          </div>
         </div>
-
-        <div class="cocktail-cards">
-          <% @cocktails.order('lower(name)').each do |cocktail| %>
-            <div class="card">
-              <div class="card-title">
-                <h3><%= cocktail.name.capitalize %></h3>
-              </div>
-              <div class="card-image">
-                <% if cocktail.tag %>
-                  <%= link_to  cocktail_path(cocktail) do %>
-                    <%= image_tag "#{cocktail.tag}", alt: "#{cocktail.name}" %>
-                  <% end %>
-                <% else %>
-                  <%= link_to  cocktail_path(cocktail) do %>
-                    <%= image_tag "cocktail_card.jpg", alt: "#{cocktail.name}" %>
-                  <% end %>
-                <% end %>
-              </div>
-              <div class="card-rating">
-                <p class="stars"><%= "✩" * cocktail.rating %></p>
-              </div>
-            </div>
-          <% end %>
-        </div>
-        
-      </div>
-
+      <% end %>
     </div>
-  </div>
-      <div id="column-03"></div>
 
+  </div>
+
+  <div data-infinite-scroll-target="pagination">
+    <div class="page-num">
+      <%== pagy_nav(@pagy) %>
+    </div>
   </div>
 </div>

@@ -1,9 +1,15 @@
 class CocktailsController < ApplicationController
   def index
-    @cocktails = Cocktail.all
+    # @cocktails = Cocktail.all
     @cocktail = Cocktail.new
-    # @all = @cocktails.map { |c| c.name.capitalize }
-    # @cocktails_all = @all.sort
+    @pagy, @cocktails = pagy Cocktail.all
+
+    respond_to do |format|
+      format.html
+      format.json {
+        render json: { entries: render_to_string(partial: "cocktails", formats: [:html]), pagination: view_context.pagy_nav(@pagy) }
+      }
+    end
   end
 
   def show

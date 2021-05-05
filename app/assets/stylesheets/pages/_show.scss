@@ -1,6 +1,8 @@
 .show-content {
   height: 100%;
-  border-top: black solid 16px;
+
+  
+  // border-top: black solid 2px;
 }
 
 .show-cocktail {
@@ -9,14 +11,17 @@
   // border: green solid 3px;
   min-height: 750px;
   height: 100%;
+  
 }
 
 .cocktail-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: $dark-green solid 2px;
-  margin: 88px 0 88px 0;
+  background-color: $dark-green;
+  color: white;
+  padding: 88px 0 88px 0;
+  // margin: 88px 0 88px 0;
 
   h2 {
     margin: 48px;
@@ -42,6 +47,6 @@
 }
 
 .show-footer {
-  height: 200px;
-  background-color: $dark-green;
+  height: 500px;
+  background-color: white;
 }

@@ -34,7 +34,7 @@ alcohol = [
 ]
 
 
-7.times do
+40.times do
   rand_num = rand(3..7)
   
   faker_array_ing = []
