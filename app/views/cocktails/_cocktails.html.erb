@@ -24,9 +24,13 @@
               </div>
               <div class="card-image">
                 <% if cocktail.tag %>
-                  <%= image_tag "#{cocktail.tag}", alt: "#{cocktail.name}" %>
+                  <%= link_to  cocktail_path(cocktail) do %>
+                    <%= image_tag "#{cocktail.tag}", alt: "#{cocktail.name}" %>
+                  <% end %>
                 <% else %>
-                  <%= image_tag "cocktail_card.jpg", alt: "#{cocktail.name}" %>
+                  <%= link_to  cocktail_path(cocktail) do %>
+                    <%= image_tag "cocktail_card.jpg", alt: "#{cocktail.name}" %>
+                  <% end %>
                 <% end %>
               </div>
               <div class="card-rating">
