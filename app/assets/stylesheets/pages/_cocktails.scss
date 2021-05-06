@@ -14,19 +14,19 @@
   min-height: 100vh;
 }
 
-.cocktail-search {
-  // border: white solid 2px;
-  height: 56px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+// .cocktail-search {
+//   // border: white solid 2px;
+//   height: 56px;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
 
-  & p {
-    margin: 0;
-    font-family: "Chivo", "sans-serif";
-    font-size: 14px;
-  }
-}
+//   & p {
+//     margin: 0;
+//     font-family: "Chivo", "sans-serif";
+//     font-size: 14px;
+//   }
+// }
 
 .cocktail-anchor {
   display: block;
@@ -38,5 +38,5 @@
 .page-num {
   text-align: center;
   margin-bottom: 60px;
-  font-family: "Chivo";
+  font-family: "Chivo", "sans-serif";
 }

@@ -1,27 +1,21 @@
 .show-content {
   height: 100%;
-
-  
-  // border-top: black solid 2px;
 }
 
 .show-cocktail {
   display: grid;
   grid-template-columns: 50% 50%;
-  // border: green solid 3px;
   min-height: 750px;
   height: 100%;
-  
 }
 
 .cocktail-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $dark-green;
+  background-image: linear-gradient(to right bottom, #014026, #586137, #9d815f, #d7a69d, #ffd3e3);
   color: white;
   padding: 88px 0 88px 0;
-  // margin: 88px 0 88px 0;
 
   h2 {
     margin: 48px;
@@ -29,6 +23,7 @@
 }
 
 .cocktail-infos {
+  position: relative;
   margin: 36px;
 
   .subtile {
@@ -46,7 +41,13 @@
   }
 }
 
-.show-footer {
-  height: 500px;
-  background-color: white;
+.back-link {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
 }
+
+// .show-footer {
+//   height: 500px;
+//   background-color: white;
+// }
