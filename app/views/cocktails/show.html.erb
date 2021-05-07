@@ -39,20 +39,12 @@
         </div>
         <div class="ingredient">
           <div class="ingredient-col1">
-            <% if @cocktail.ingredient %>
-              <h2>Ingredients :</h2>
-              <p><%= @cocktail.ingredient.gsub(/\n/, "<br>").html_safe %>
-            <% else %>
-              <p></p>
-            <% end %>
+            <h2>Ingredients :</h2>
+            <p><%= @cocktail.ingredient.gsub(/\n/, "<br>").html_safe %>
           </div>
           <div class="ingredient-col2">
-            <% if @cocktai.description %>
-              <h2>Description :</h2>
-              <p><%= @cocktail.description %></p>
-            <% else %>
-              <p></p>
-            <% end %>
+            <h2>Description :</h2>
+            <p><%= @cocktail.description %></p>
           </div>
         </div>
         <div class="back-link">
