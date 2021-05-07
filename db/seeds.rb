@@ -29,14 +29,14 @@ puts 'Creating Cocktails..'
 puts '...'
 
 alcohol = [
-  'tequila', 'rum', 'vodka', 'gin', 'whisk(e)y', 'brandy', 
+  'tequila', 'rum', 'vodka', 'gin', 'whisk(e)y', 'brandy',
   'vermouth', 'liqueur', 'non-alcoholic', 'beer', 'wine', 'other'
 ]
 
 
 8.times do
   rand_num = rand(3..7)
-  
+
   faker_array_ing = []
   rand_num.times do
     faker_array_ing << "#{Faker::Food.measurement} #{Faker::Food.ingredient}<br>"
