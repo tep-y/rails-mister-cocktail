@@ -41,6 +41,7 @@
           <div class="ingredient-col1">
             <h2>Ingredients :</h2>
             <p><%= @cocktail.ingredient&.gsub(/\n/, "<br>").to_s.html_safe %>
+              <%= @cocktail.alcohol if @cocktail.tag.nil? %></p>
           </div>
           <div class="ingredient-col2">
             <h2>Description :</h2>
