@@ -40,6 +40,17 @@ p {
   font-family: "Chivo", "sans-serif";
 }
 
+a {
+  text-decoration: none;
+  color: $burgundy;
+  font-family: "Chivo", "sans-serif";
+  font-size: 12px;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .stars {
   font-size: 18px;
   margin: 0;
@@ -47,30 +58,13 @@ p {
   color: $burgundy;
 }
 
-a {
-  text-decoration: none;
-  color: $burgundy;
-  font-family: "Chivo", "sans-serif";
-
-  &:hover {
-  text-decoration: underline;
-  }
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  font-family: "Chivo", "sans-serif";
-  font-size: 14px;
-  color: red;
-}
-
 #top {
   font-size: 40px;
   color: white;
+}
+
+.hidden {
+  display: none;
 }
 
 .footer {
@@ -80,8 +74,4 @@ li {
   & p {
     margin: 0;
   }
-}
-
-.hidden {
-  display: none;
 }

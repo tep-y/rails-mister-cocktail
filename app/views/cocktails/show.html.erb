@@ -15,7 +15,7 @@
       <% end %>
       </div>
 
-      <div class="cocktail-infos">
+      <div class="show-infos">
         <div class="title">
           <h1><%= @cocktail.name.capitalize %></h1>
         </div>
@@ -23,15 +23,18 @@
           <p class="cocktail-subtile">Main alcohol : <%= "#{@cocktail.alcohol.capitalize}" %></p>
           <p>|</p>
           <p>
-            <%= "#{@cocktail.rating}/5" %>
-            <%= "✩" * @cocktail.rating %>
+            <% if @cocktail.rating > 0 %>
+              <%= "#{@cocktail.rating}/5" %>
+              <%= "✩" * @cocktail.rating %>
+            <% else %>
+              Not yet rated
+            <% end %>
           </p>
         </div>
         <div class="ingredient">
           <div class="ingredient-col1">
             <h2>Ingredients :</h2>
-            <p><%= @cocktail.ingredient.html_safe %>
-            <%= @cocktail.alcohol %>
+            <p><%= @cocktail.ingredient.gsub(/\n/, "<br>").html_safe %>
           </div>
           <div class="ingredient-col2">
             <h2>Description :</h2>
@@ -39,10 +42,9 @@
           </div>
         </div>
         <div class="back-link">
-          <%= link_to "Back to Cocktail list", :back %>
+          <%= link_to "Back", :back %>
         </div>
 
-       
       </div>
     </div>
   </div>
