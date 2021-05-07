@@ -17,11 +17,9 @@
 
       <div class="show-infos">
         <div class="title">
-          <% if !@cocktail.name.nil? %>
+          <% if !@cocktail.nil? %>
             <h1><%= @cocktail.name.capitalize %></h1>
-          <% else %>
-            <h1></h1>
-          <% end %>
+
         </div>
         <div class="subtile">
           <% if !@cocktail.alcohol.nil? %>
@@ -53,6 +51,9 @@
           <%= link_to "Back", :back %>
         </div>
 
+          <% else %>
+            <p></p>
+          <% end %>
       </div>
     </div>
   </div>
