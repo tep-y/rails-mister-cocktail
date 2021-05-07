@@ -8,7 +8,7 @@
       <% else %>
         <div class="cocktail-text">
           <div class="text">
-          <h2>There's no image for this cocktail. But just close your eyes and 
+          <h2>There's no image for this cocktail. But just close your eyes and
         image yourself on the beach, with this cocktail in your hand. The sun is shining bright, the water is cool,
         and there's just hapiness around you. Everything is a-okay!</h2>
           </div>
@@ -17,7 +17,11 @@
 
       <div class="show-infos">
         <div class="title">
-          <h1><%= @cocktail.name.capitalize %></h1>
+          <% if !@cocktail.name.nil? %>
+            <h1><%= @cocktail.name.capitalize %></h1>
+          <% else %>
+            <h1></h1>
+          <% end %>
         </div>
         <div class="subtile">
           <p class="cocktail-subtile">Main alcohol : <%= "#{@cocktail.alcohol.capitalize}" %></p>
@@ -72,7 +76,7 @@
       <%= link_to icon('fas', 'ban'), dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }  %>
        </p>
     <% end %>
-    <%= image_tag "#{@cocktail.name}.jpg", height: 300 %> 
+    <%= image_tag "#{@cocktail.name}.jpg", height: 300 %>
 
   <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: "add-link" %>
   </div>
