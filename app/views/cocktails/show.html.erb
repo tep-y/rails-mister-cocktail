@@ -29,7 +29,7 @@
           <% end %>
           <p>|</p>
           <p>
-            <% if @cocktail.rating || @cocktail.rating > 0 %>
+            <% if @cocktail.rating || @cocktail.rating >= 0 %>
               <%= "#{@cocktail.rating}/5" %>
               <%= "✩" * @cocktail.rating %>
             <% else %>
