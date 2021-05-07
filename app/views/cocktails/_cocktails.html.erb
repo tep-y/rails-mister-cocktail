@@ -6,7 +6,10 @@
         <div class="card">
           <div class="card-title">
             <% if !cocktail.name.nil? %>
-            <h3><%= cocktail.name.capitalize %></h3>
+              <h3><%= cocktail.name.capitalize %></h3>
+            <% else %>
+              <h3></h3>
+            <% end %>
           </div>
           <div class="card-image">
             <% if cocktail.tag %>
@@ -24,7 +27,6 @@
               <p class="stars"><%= "✩" * cocktail.rating %></p>
             <% else %>
             <p></p>
-            <% end %>
             <% end %>
           </div>
         </div>
