@@ -17,12 +17,12 @@
 
       <div class="show-infos">
         <div class="title">
-          <% if !@cocktail.nil? %>
+          <% if @cocktail %>
             <h1><%= @cocktail.name.capitalize %></h1>
 
         </div>
         <div class="subtile">
-          <% if !@cocktail.alcohol.nil? %>
+          <% if @cocktail.alcohol %>
             <p class="cocktail-subtile">Main alcohol : <%= "#{@cocktail.alcohol.capitalize}" %></p>
           <% else %>
             <p></p>
