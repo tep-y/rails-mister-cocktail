@@ -19,7 +19,11 @@
             <% end %>
           </div>
           <div class="card-rating">
-            <p class="stars"><%= "✩" * cocktail.rating %></p>
+            <% if cocktail.rating %>
+              <p class="stars"><%= "✩" * cocktail.rating %></p>
+            <% else %>
+            <p></p>
+            <% end %>
           </div>
         </div>
       <% end %>
