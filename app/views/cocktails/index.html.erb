@@ -1,28 +1,30 @@
-<%= render :partial => 'cocktails/navbar' %>
+<div class="container">
+  <%= render :partial => 'cocktails/navbar' %>
 
-<div class="cocktail-anchor" id="cocktails">
-</div>
-
-<div class="cocktail-container">
-
-  <div class="cocktail-title">
-    <h1>~ Cocktails ~</h1>
+  <div class="cocktail-anchor" id="cocktails">
   </div>
 
-  <div class="cocktail-list">
-    <div id="column-01">
+  <div class="cocktail-container">
+
+    <div class="cocktail-title">
+      <h1>~ Cocktails ~</h1>
     </div>
 
-    <div class="cocktail-info">
-      <div class="cocktail-search">
-        <%# <p>view:</p>
-        <p>spirit</p>
-        <p>rating</p> %>
+    <div class="cocktail-list">
+      <div id="column-01">
       </div>
-      <%= render :partial => 'cocktails/cocktails' %>
-    </div>
 
-    <div id="column-03">
+      <div class="cocktail-info">
+        <div class="cocktail-search">
+          <%# <p>view:</p>
+          <p>spirit</p>
+          <p>rating</p> %>
+        </div>
+        <%= render :partial => 'cocktails/cocktails' %>
+      </div>
+
+      <div id="column-03">
+      </div>
     </div>
   </div>
 </div>
