@@ -5,6 +5,12 @@
   background-color: $light-grey;
   padding: 0 144px 0 144px;
 
+  img {
+    width: 220px;
+  }
+}
+
+.navbar-container {
   & a {
     color: black;
     font-family: "Chivo";

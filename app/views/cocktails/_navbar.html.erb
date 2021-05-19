@@ -1,9 +1,23 @@
-<div class="main-bar">
-  <%= link_to "what?", root_path(:anchor => "what") %>
-  <%= link_to "who?", root_path(:anchor => "who") %>
-  <%= link_to root_path do %>
-    <%= image_tag "logo.png", alt: "logo", width: "220px" %>
-  <% end %>
-  <%= link_to "cocktails!", cocktails_path %>
-  <%= link_to "#share", root_path(:anchor => "share") %>
+<div class="navbar-container">
+  <div class="main-bar">
+    <%= link_to "what?", root_path(:anchor => "what") %>
+    <%= link_to "who?", root_path(:anchor => "who") %>
+    <%= link_to root_path do %>
+      <%= image_tag "logo.png", alt: "logo" %>
+    <% end %>
+    <%= link_to "cocktails!", cocktails_path %>
+    <%= link_to "#share", root_path(:anchor => "share") %>
+  </div>
+
+  <div class="navbar-collapse">
+    <%= link_to root_path do %>
+      <%= image_tag "logo.png", alt: "logo" %>
+    <% end %>
+    <div class="navbar-menu">
+        <%= link_to "what?", root_path(:anchor => "what") %>
+        <%= link_to "who?", root_path(:anchor => "who") %>
+        <%= link_to "cocktails!", cocktails_path %>
+        <%= link_to "#share", root_path(:anchor => "share") %>
+    </div>
+  </div>
 </div>

@@ -86,3 +86,27 @@ li {
   font-size: 14px;
   color: red;
 }
+
+@media only screen and (max-width: 600px) {
+  .main-bar {
+    display: none;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+
+    img {
+      padding-top: 24px;
+      width: 180px;
+    }
+  }
+
+  .navbar-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px 0 24px 0;
+  }
+
+
+}
