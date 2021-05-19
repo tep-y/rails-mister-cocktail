@@ -20,9 +20,12 @@
   position: relative;
   align-items: center;
   justify-content: center;
-}
-
-.panel-02 h1 {
+  
+  & img {
+    width: 400px;
+  }
+  
+  & h1 {
   position: absolute;
   width: 440px;
   top: 250px;
@@ -30,10 +33,12 @@
   font-weight: bold;
   font-size: 36px;
   color: white;
-
-  & .highlight {
+  }
+  
+  .highlight {
     color: #7A0F1A;
     background-color: white;
   }
+
 }
 
