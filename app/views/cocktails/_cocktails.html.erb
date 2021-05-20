@@ -5,7 +5,11 @@
       <% @cocktails.order('lower(name)').each do |cocktail| %>
         <div class="card">
           <div class="card-title">
-            <h3><%= cocktail.name.capitalize %></h3>
+            <% if !cocktail.name.nil? %>
+              <h3><%= cocktail.name.capitalize %></h3>
+            <% else %>
+              <h3></h3>
+            <% end %>
           </div>
           <div class="card-image">
             <% if cocktail.tag %>
@@ -19,7 +23,11 @@
             <% end %>
           </div>
           <div class="card-rating">
-            <p class="stars"><%= "✩" * cocktail.rating %></p>
+            <% if cocktail.rating %>
+              <p class="stars"><%= "✩" * cocktail.rating %></p>
+            <% else %>
+            <p></p>
+            <% end %>
           </div>
         </div>
       <% end %>
