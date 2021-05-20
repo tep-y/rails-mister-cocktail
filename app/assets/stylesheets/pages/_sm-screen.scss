@@ -240,4 +240,22 @@
     bottom: -64px;
     right: -64px;
   }
+
+  //cocktails 
+  .cocktail-title {
+    h1 {
+      font-size: 72px;
+    }
+  }
+  
+  .cocktail-list {
+    display: block;
+  }
+
+  .cocktail-cards {  
+    &::after {
+      content: "";
+      flex: none;
+    }
+  }
 }
