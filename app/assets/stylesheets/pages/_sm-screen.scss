@@ -97,6 +97,7 @@
 
     & h1 {
       line-height: 1;
+      font-size: 88px;
     }
   }
 
@@ -160,6 +161,7 @@
   
     & h1 {
       line-height: 1;
+      font-size: 88px;
     }
   }
   
@@ -168,4 +170,68 @@
     padding-left: 0px;
   }
   
+  //who-page
+  .who-container {
+    background-color: $dark-green;
+    margin-bottom: 44px;
+  
+    & p {
+      color: white;
+      font-size: 16px;
+    }
+  
+    & h1 {
+        line-height: 1;
+        color: white;
+    }
+  }
+  
+  .who-grids {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+    width: 100%;
+    height: 580px;
+    position: relative;
+  
+    .blob-who-white {
+      position: absolute;
+      top: 150px;
+      left: 440px;
+      width: 100px;
+      z-index: 1;
+    }
+  }
+  
+  .who-title {
+    display: flex;
+    float: none;
+    width: 400px;
+  }
+  
+  .panel-07 {
+    border: none;
+    margin: 0;
+    padding: 36px 0 0 36px;
+    text-align: left;
+
+    h1 {
+      text-align: left;
+      font-size: 60px;
+    }
+  }
+  
+  .panel-08 {
+    margin: 0;
+    padding: 0 36px 36px 36px;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+  
+    & #icon {
+      color: $pink;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+  }
 }
