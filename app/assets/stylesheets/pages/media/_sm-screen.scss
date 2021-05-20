@@ -270,12 +270,16 @@
   //cocktails 
   .cocktail-title {
     h1 {
-      font-size: 72px;
+      font-size: 64px;
     }
   }
   
   .cocktail-list {
     display: block;
+  }
+
+  .cocktail-cards {
+    justify-content: center;
   }
 
   .cocktail-cards {  
