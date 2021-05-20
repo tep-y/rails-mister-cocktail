@@ -258,4 +258,22 @@
       flex: none;
     }
   }
+
+  //show-page
+  .show-content {
+    height: 100%;
+  }
+  
+  .show-cocktail {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+    min-height: 1000px;
+    max-height: 1300px;
+    height: 100%;
+  }
+  
+  .back-link {
+    display: none;
+  }
 }
