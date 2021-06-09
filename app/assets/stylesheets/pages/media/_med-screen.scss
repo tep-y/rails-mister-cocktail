@@ -1,4 +1,4 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 900px) {
 
   h1 {
     font-size: 76px;
@@ -154,39 +154,39 @@
   }
 
     //show-page
-    .show-content {
-      height: 100%;
+  .show-content {
+    height: 100%;
+  }
+  
+  .show-cocktail {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+    min-height: 1000px;
+    max-height: 1300px;
+    height: 100%;
+  }
+
+  .show-infos {
+    position: relative;
+    margin: 36px;
+  
+    h1 {
+      font-size: 64px;
     }
-    
-    .show-cocktail {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 30% 70%;
-      min-height: 1000px;
-      max-height: 1300px;
-      height: 100%;
+
+    .subtile {
+      display: flex;
+      justify-content: space-between;
     }
   
-    .show-infos {
-      position: relative;
-      margin: 36px;
-    
-      h1 {
-        font-size: 64px;
-      }
-  
-      .subtile {
-        display: flex;
-        justify-content: space-between;
-      }
-    
-      .cocktail-subtile {
-          font-family: "Chivo", "sans-serif";
-          font-size: 14px;
-      }
+    .cocktail-subtile {
+        font-family: "Chivo", "sans-serif";
+        font-size: 14px;
     }
-  
-    .back-link {
-      display: none;
-    }
+  }
+
+  .back-link {
+    display: none;
+  }
 }

@@ -1,11 +1,12 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
   .navbar-collapse {
     display: none;
   }
 
-  .cocktail-list {
-    display: grid;
-    grid-template-columns: 1fr 1000px 1fr;
-    min-height: 100vh;
-  }
+  // .show-cocktail {
+  //   display: grid;
+  //   grid-template-columns: 50% 50%;
+  //   min-height: 750px;
+  //   height: 100%;
+  // }
 }
